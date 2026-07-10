@@ -5,21 +5,21 @@
 class TfTriage < Formula
   desc "An AI-powered semantic plan analyzer for Terraform and OpenTofu."
   homepage "https://github.com/balmha/tf-triage"
-  version "0.7.0"
+  version "1.0.0"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/balmha/tf-triage/releases/download/v0.7.0/tf-triage_darwin_amd64.tar.gz"
-      sha256 "f795d1eb9f8ddfd29eb21263c5bf00bc74faf6ac5e593e9bcd98e2939b941bd2"
+      url "https://github.com/balmha/tf-triage/releases/download/v1.0.0/tf-triage_darwin_amd64.tar.gz"
+      sha256 "d526315715def80233e449a1c5ff02b9bffd1c13e1f71dbb48d552fed061ac73"
 
       define_method(:install) do
         bin.install "tf-triage"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/balmha/tf-triage/releases/download/v0.7.0/tf-triage_darwin_arm64.tar.gz"
-      sha256 "a3aafb73c3676c1dd8b1da5003528e2cdcb008f7435cd6fe6b7059e5fa3494a6"
+      url "https://github.com/balmha/tf-triage/releases/download/v1.0.0/tf-triage_darwin_arm64.tar.gz"
+      sha256 "4149d89da10976da3998bf67297372df2d327d8d89ed670886692d4cb4514d0d"
 
       define_method(:install) do
         bin.install "tf-triage"
@@ -29,15 +29,15 @@ class TfTriage < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/balmha/tf-triage/releases/download/v0.7.0/tf-triage_linux_amd64.tar.gz"
-      sha256 "9f03096fc7ed4345eae93147f0061edbad194f4d550ffff50f474aec1cc42bfe"
+      url "https://github.com/balmha/tf-triage/releases/download/v1.0.0/tf-triage_linux_amd64.tar.gz"
+      sha256 "688751af4cba4457dedc341f326e081af3c7ae104cb22c7aa013d48ba4407d71"
       define_method(:install) do
         bin.install "tf-triage"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/balmha/tf-triage/releases/download/v0.7.0/tf-triage_linux_arm64.tar.gz"
-      sha256 "467495a8c74fb7dd7cf71908727b63ae59f6609ef438816523e08def86b330f4"
+      url "https://github.com/balmha/tf-triage/releases/download/v1.0.0/tf-triage_linux_arm64.tar.gz"
+      sha256 "9a53a62a9feca036fc99e717a97d439217e48c645347082a639e2606f73ab21f"
       define_method(:install) do
         bin.install "tf-triage"
       end
